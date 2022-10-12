@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Doctype es una instruccion que le dice al navegador que tipo de contenido tiene nuestro codigo-->
+<html lang="en">
+<!--la etiqueta html es el elemento de nivel superior de una pagina web-->
+<head>
+    <!--head le da información al navegador acerca de la estructura de nuestro documento html-->
+    <meta charset="UTF-8">
+    <!--meta charset indica al navegador que grupo de caracteres vamos a usar en nuestro documento-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--http-equiv le da version al contenido mostrado-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewport le indica al navegador que tamaño y escalabilidad va a manejar con nuestro contenido-->
+    <title>Document</title>
+    <!--titulo de la pagina-->
+</head>
+<body>
+<!--contenido de la pagina-->
+<!--un href con # indica que, al presionar el link, irá a una sección que tenga el mismo id que lleva el #, como se muestra con las secciones aqui-->
+    <!--ol: lista ordenada, que es una lista que puede venir enumerada a diferencia de los bullet points de la lista desordenada (ul)-->
+    <ol>
+        <li><a href="#sec1">IR A SECCION 1</a></li>
+        <li><a href="#sec2">IR A SECCION 2</a></li>
+        <li><a href="#sec3">IR A SECCION 3</a></li>
+        <li><a href="#sec4">IR A SECCION 4</a></li>
+        <li><a href="#sec5">IR A SECCION 5</a></li>
+    </ol>   
+    <h1>bienvenidos a mi primera pagina</h1>
+    <!--h1, asi como de h2 a h6 son encabezados de diversos tamaños-->
+    <h2>Mi nombre es</h2>
+    <p>Alejandro Sánchez</p>
+    <!--p es parrafo-->
+    <h3>Acerca de mí:</h3>
+    <p>Soy maestro en ingeniería de software desde el año 2022, premio doble de tesis estatal (2020 - 2022)</p>
+    <!--<p>de esta forma, se comentan etiquetas completas</p>-->
+    <!--las etiquetas main, header, footer, nav, article, section, entre otras fueron agregadas en html version 5-->
+    <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.18169-9/15822546_10211764766460449_7241082827297453682_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=khqDSU1AlowAX_DU1ZR&_nc_pt=1&_nc_ht=scontent-lga3-1.xx&oh=00_AT-Qtmx1LX5hQaXbN14rulJMnZVvTx8ZGwBiQxKMq5ohVQ&oe=63655105" alt="" width="500">
+    <!--img: imagen, recordar que tiene diversos parametros como width (ancho), src que es source o link/directorio de la imagen, alt que es texto alternativo-->
+
+    <!--&nbsp es igual a nonbreakingspace, para no poner debajo el elemento contiguo inmediato-->
+    <!--mientras que br es salto de linea-->
+    <!-- todos estos son los tipos de input disponibles, a continuación, una estructura de formulario-->
+    input de tipo texto &nsbp; <input type="text" /><br/>
+    input de tipo numero &nsbp; <input type="number" /><br/>
+    input de tipo telefono &nsbp; <input type="tel" /><br/>
+    input de tipo hora &nsbp; <input type="time" /><br/>
+    input de tipo fecha &nsbp; <input type="date" /><br/>
+    input de tipo fecha y hora &nsbp; <input type="datetime" /><br/>
+    input de tipo boton &nsbp; <input type="button" /><br/>
+    input de tipo checkbox &nsbp; <input type="checkbox" /><br/>
+    input de tipo color??? &nsbp; <input type="color" /><br/>
+    input de tipo email &nsbp; <input type="email" /><br/>
+    input de tipo archivo &nsbp; <input type="file" /><br/>
+    input de tipo oculto &nsbp; <input type="hidden" /><br/>
+    input de tipo imagen &nsbp; <input type="image" /><br/>
+    input de tipo mes &nsbp; <input type="month" /><br/>
+    input de tipo contraseña &nsbp; <input type="password" /><br/>
+    input de tipo boton de radio &nsbp; <input type="radio" /><br/>
+    input de tipo rango &nsbp; <input type="range" /><br/>
+    input de tipo reset &nsbp; <input type="reset" /><br/>
+    input de tipo busqueda (search) &nsbp; <input type="search" /><br/>
+    input de tipo enviar (submit) &nsbp; <input type="submit" /><br/>
+    input de tipo url &nsbp; <input type="url" /><br/>
+    input de tipo semana &nsbp; <input type="week" /><br/>
+
+    <br>
+    <br>
+    <!--form: formularios, envian a la url la información solicitada por los inputs dentro de esta etiqueta, cada input se envia y se separa por el
+    caracter '&'
+    el atributo action te permite indicar hacia donde se iran los datos-->
+    <form>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>SECCIONES</h2>
+
+    <!--los id son identificadores de etiquetas que pueden ser usadas para distinguir entre etiquetas iguales de una misma seccion -->
+    <h3 id="sec1">SECCION 1</h3>
+    <p>washawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawasha</p>
+    <h3 id="sec2">SECCION 2</h3>
+    <p>washawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawasha</p>
+    <h3 id="sec3">SECCION 3</h3>
+    <p>washawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawasha</p>
+    <h3 id="sec4">SECCION 4</h3>
+    <p>washawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawasha</p>
+    <h3 id="sec5">SECCION 5</h3>
+    <p>washawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawashawasha</p>
+
+    <footer>Redes sociales:
+        <ul>
+        <!--lista desordenada-->
+            <li>Twitter <a target="_blank" href="http://twitter.com/camilomontoyau">@alexs2</a></li>
+            <!--li: elementos de lista-->
+            <!--a: anchor o anexar link a un objeto de texto/imagen-->
+            <!--el target _blank es para abrir el link en una pestaña nueva-->
+            <li>Instagram <a target="_blank" href="http://instagram.com/alejandrossanchez_">@alejandrossanchez_</a></li>
+            <li>Facebook <a target="_blank" href="https://www.facebook.com/AlexSanchezx2/">Alejandro Sánchez</a></li>
+        </ul>
+
+        <p>
+            Email:
+            <a href="mailto:sanchez.alejandro0603@gmail.com">sanchez.alejandro0603@gmail.com</a>
+        </p>
+
+        <p>
+            Copyright 1997-2022 Alejandro Sánchez. Todos los derechos reservados.
+        </p>
+    </footer>
+</body>
+</html>
