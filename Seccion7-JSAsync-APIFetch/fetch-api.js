@@ -1,4 +1,10 @@
-/**FETCH-API:  */
+/**FETCH-API:  TODO ESTE SCRIPT ES PARA GENERAR UN CRUD QUE PERMITA
+ * MOSTRAR NOMBRES, MODIFICARLOS, ELIMINARLOS Y CREARLOS,
+ * ES DECIR, UN CRUD. YA HAS HECHO UN CRUD ANTES, ASÍ QUE YA SABES
+ * DE QUE VA ESTE TEMA
+ * EL CODIGO INCLUYE LOS DOS CODIGOS DE JS Y LOS DOS CODIGOS DE HTML
+ * DEBIDO A QUE SON 2 PAGINAS DE INDEX
+*/
     //se crean variables para almacenar el nombre del input
 const userList = document.getElementById('user-list')
 const button = document.getElementById("button")
