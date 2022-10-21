@@ -16,9 +16,19 @@ const inputIndex = document.getElementById("pet-index")
 
 let pets = [
     {
-    petType: "Gato",
-    petName : "Manchas",
-    petOwner : "Miguel"
+        petType: "Gato",
+        petName : "Manchas",
+        petOwner : "Miguel"
+    },
+    {
+        petType: "Perro",
+        petName : "Firulais",
+        petOwner : "Alejandro"
+    },
+    {
+        petType: "Pájaro",
+        petName : "Pacho",
+        petOwner : "Oscar"
     }
 ]
 
@@ -31,13 +41,14 @@ function listPets() {
         <td>${pet.petOwner}</td>
         <td>
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-info edit" data-index=${index}>Editar</button>
-            <button type="button" class="btn btn-danger">Eliminar</button>
+            <button type="button" class="btn btn-info edit" data-toggle="modal" data-target="#exampleModalCenter">Editar</button>
+            <button type="button" class="btn btn-danger delete-pet">Eliminar</button>
         </div>
         </td>
      </tr>`).join("");
      petList.innerHTML = htmlPets
-     Array.from(document.getElementsByClassName('edit')).forEach((editBtn) => editBtn.onclick = edit)
+     Array.from(document.getElementsByClassName('edit')).forEach((editBtn, index) => editBtn.onclick = edit(index))
+     Array.from(document.getElementsByClassName('delete-pet')).forEach((deleteBtn, index) => deleteBtn.onclick = deletePet(index))
 }
 
 function submitData(event) {
@@ -48,12 +59,47 @@ function submitData(event) {
         petOwner: petOwner.value
 
     }
-    pets.push(data)
+    const action = petSaveBtn.innerHTML
+    switch(action) {
+        case "Editar":
+            //editar
+            pets[inputIndex.value] = data
+            break;
+        default:
+            //crear
+            pets.push(data)
+            break;
+
+    }
     listPets()
+    resetModal()
 }
 
-function edit(event) {
-    console.log(event);
+function edit(index) {
+    return function whenClicked() {
+        petSaveBtn.innerHTML = 'Editar'
+        $('#exampleModalCenter').modal('toggle')
+        const pet = pets[index]
+        petType.value = pet.petType
+        petName.value = pet.petName
+        petOwner.value = pet.petOwner
+        inputIndex.value = index
+    }
+}
+
+function resetModal() {
+    petType.value = ""
+    petName.value = ""
+    petOwner.value = ""
+    inputIndex.value = ""
+    petSaveBtn.innerHTML = 'Crear'
+}
+
+function deletePet(index) {
+    return function whenDeleteClicked() {
+        pets = pets.filter((pet, petIndex)=> petIndex !== index)
+        listPets()
+    }
 }
 
 listPets()
